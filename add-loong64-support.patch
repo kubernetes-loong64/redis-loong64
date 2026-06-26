@@ -1,0 +1,11 @@
+diff --git a/debian/Dockerfile b/debian/Dockerfile
+index 57863d4..48c3241 100644
+--- a/debian/Dockerfile
++++ b/debian/Dockerfile
+@@ -1,4 +1,5 @@
+-FROM debian:trixie-slim
++ARG BASE_IMAGE=debian:trixie-slim
++FROM $BASE_IMAGE
+ 
+ # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
+ RUN set -eux; \
